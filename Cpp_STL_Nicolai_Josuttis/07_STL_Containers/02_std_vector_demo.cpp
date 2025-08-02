@@ -57,7 +57,7 @@ void vectorDemo()
     printVector(vec4);        
 
     std::vector<int> vec5 = vec2;
-    std::cout << "Case 5: vector<T> vec5 = vec2 : Assignment operator  :: " << std::endl; 
+    std::cout << "Case 5: vector<T> vec5 = vec2 : Copy constructor  :: " << std::endl; 
     printVector(vec5);
 
     // Move constructor & move assignment operator
@@ -71,11 +71,11 @@ void vectorDemo()
 
     // Initializer list
     std::vector<int> vec8({6, 7, 8, 9, 10});
-    std::cout << "Case 8: vector<int> vec8({6, 7, 8, 9, 10}) : Move constructor  :: " << std::endl; 
+    std::cout << "Case 8: vector<int> vec8({6, 7, 8, 9, 10}) : Initializer list :: " << std::endl; 
     printVector(vec8);        
 
     std::vector<int> vec9 = {10, 9, 8, 7, 6};
-    std::cout << "Case 9: vector<int> vec7 = {5, 4, 3, 2, 1} : Move Assignment operator  :: " << std::endl; 
+    std::cout << "Case 9: vector<int> vec7 = {5, 4, 3, 2, 1} : Initlaizer list :: " << std::endl; 
     printVector(vec9);
    
     // Vector operations
@@ -182,25 +182,25 @@ void vectorDemo()
 
      // Iterator operations
     std::cout << "Demonstrating std::vector iterator operations" << std::endl;
-    std::cout << "Using begin() and end() to iterate -  arr17: ";
+    std::cout << "Using begin() and end() to iterate -  vec16: ";
     for(auto it = vec16.begin(); it != vec16.end(); ++it)
     {
         std::cout << *it << " ";
     }   
     std::cout << std::endl;
-    std::cout << "Using cbegin() and cend() for const iteration -  arr17: ";
+    std::cout << "Using cbegin() and cend() for const iteration -  vec16: ";
     for(auto it = vec16.cbegin(); it != vec16.cend(); ++it)
     {
         std::cout << *it << " ";
     }
     std::cout << std::endl;
-    std::cout << "Using rbegin() and rend() for reverse iteration -  arr17: ";
+    std::cout << "Using rbegin() and rend() for reverse iteration -  vec16: ";
     for(auto it = vec16.rbegin(); it != vec16.rend(); ++it)
     {
         std::cout << *it << " ";
     }
     std::cout << std::endl;
-    std::cout << "Using crbegin() and crend() for const reverse iteration -  arr17: ";
+    std::cout << "Using crbegin() and crend() for const reverse iteration -  vec16: ";
     for(auto it = vec16.crbegin(); it != vec16.crend(); ++it)
     {
         std::cout << *it << " ";
