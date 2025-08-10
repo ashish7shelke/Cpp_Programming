@@ -1,0 +1,19 @@
+IF and SWITCH with Initialization:
+
+The if and switch control structures now allow us to specify an initialization clause beside the usual condition or selection clause.
+
+if(status s = check(); s != staus::success)
+{
+    return a;
+}
+
+status s = check() --> Initialization --> Constructor is called
+As if-else finish destructor is called.
+
+This initialized s state then valid for whole if statement or if-else statements.
+Any value initialization inside if statement valid until end of then part and else part if any.
+The destructor for respective object is called at the end of then-part or at the end of the else part.
+
+For limiting scope for if or switch code segment is also one purpose for this initialization.
+
+Any object being initialized must have name otherwise, the initialization creates and destroys a temporary
